@@ -48,7 +48,7 @@
   <!-- Because this project uses vulcanize this should be your only html import
        in this file. All other imports should go in elements.html -->
   <link rel="import" href="elements/elements.html">
-  
+
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
@@ -82,10 +82,17 @@
             <span>Hospedagem</span>
           </a>
 
-          <a data-route="passeios" href="{{baseUrl}}passeios">
+          <a data-route="Passeios" href="{{baseUrl}}Passeios">
             <iron-icon icon="icons:rowing"></iron-icon>
             <span>Passeios</span>
           </a>
+
+
+          <a data-route="Alimentação" href="{{baseUrl}}Alimentação">
+            <iron-icon icon="maps:restaurant-menu"></iron-icon>
+            <span>Alimentação</span>
+          </a>
+
 
           <a data-route="contato" href="{{baseUrl}}contato">
             <iron-icon icon="mail"></iron-icon>
@@ -148,10 +155,11 @@
                 <a href$="{{baseUrl}}Hospedagem/Casas">Casas</a><br>
                 <a href$="{{baseUrl}}Hospedagem/Quartos">Quartos</a><br>
                 <a href$="{{baseUrl}}Hospedagem/Camping">Camping</a>
+                <a href$="{{baseUrl}}Hospedagem/Pousadas">Pousadas</a>                
               </paper-material>
             </section>
 
-            <section data-route="passeios">
+            <section data-route="Passeios">
               <paper-material elevation="1">
                 <h1 class="page-title focus-target" tabindex="-1">Passeios</h1>
                 <p>Esta é a seção de Passeios</p>
@@ -162,6 +170,17 @@
               </paper-material>
             </section>
 
+
+            <section data-route="Alimentação">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Alimentação</h1>
+                <p>Esta é a seção de Alimentação</p>
+                <a href$="{{baseUrl}}Alimentação/Restaurantes">Restaurantes</a><br>
+                <a href$="{{baseUrl}}Alimentação/Lanchonetes">Lanchonetes</a><br>
+                <a href$="{{baseUrl}}Alimentação/Pousadas">Pousadas</a><br>
+              </paper-material>
+            </section>
+
             <section data-route="Hospedagem-info">
               <paper-material elevation="1">
                 <h1 class="page-title focus-target" tabindex="-1">Hospedagem: {{params.name}}</h1>
@@ -169,9 +188,16 @@
               </paper-material>
             </section>
 
-            <section data-route="passeios-info">
+            <section data-route="Passeios-info">
               <paper-material elevation="1">
                 <h1 class="page-title focus-target" tabindex="-1">Passeios: {{params.name}}</h1>
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="Alimentação-info">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Alimentação: {{params.name}}</h1>
                 <div>Esta é a seção {{params.name}}</div>
               </paper-material>
             </section>

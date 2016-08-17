@@ -63,18 +63,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.params = data.params;
       setFocus(app.route);
     });
-    
+
     page('/Passeios', function() {
-      app.route = 'passeios';
+      app.route = 'Passeios';
       setFocus(app.route);
     });
 
-    page('/passeios/:name', function(data) {
-      app.route = 'passeios-info';
+    page('/Passeios/:name', function(data) {
+      app.route = 'Passeios-info';
       app.params = data.params;
       setFocus(app.route);
     });
 
+
+    page('/Alimentação', function() {
+      app.route = 'Alimentação';
+      setFocus(app.route);
+    });
+
+    page('/Alimentação/:name', function(data) {
+      app.route = 'Alimentação-info';
+      app.params = data.params;
+      setFocus(app.route);
+    });
+    
     page('/contact', function() {
       app.route = 'contact';
       setFocus(app.route);
