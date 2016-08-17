@@ -1,0 +1,29 @@
+<link rel="import" href="../../bower_components/google-map/google-map-search.html">
+
+<!-- <dom-module id="my-map">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      span {
+        @apply(--paper-font-body1);
+      }
+    </style>
+    </template> -->
+       
+    <template is="my-map">
+      <google-map-search map="[[map]]" query="Pizza" results="{{results}}">
+      </google-map-search>
+      <google-map map="{{map}}" latitude="37.779"
+                  longitude="-122.3892">
+        <template is="dom-repeat" items="{{results}}" as="marker">
+          <google-map-marker latitude="{{marker.latitude}}"
+                             longitude="{{marker.longitude}}">
+            <h2>{{marker.name}}</h2>
+            <span>{{marker.formatted_address}}</span>
+          </google-map-marker>
+        </template>
+      </google-map>
+    </template>

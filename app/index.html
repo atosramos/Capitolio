@@ -42,6 +42,8 @@
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
   <link rel="import" href="bower_components/polymer/polymer.html">
   <link rel="import" href="simple-gallery.html">
+  <link rel="import" href="bower_components/iron-icons/maps-icons.html">
+  <link rel="import" href="bower_components/iron-image/iron-image.html">
  
   <!-- endbuild -->
 
@@ -78,7 +80,7 @@
           </a>
 
           <a data-route="Hospedagem" href="{{baseUrl}}Hospedagem">
-            <iron-icon icon="icons:store"></iron-icon>
+            <iron-icon icon="maps:hotel"></iron-icon>
             <span>Hospedagem</span>
           </a>
 
@@ -93,8 +95,29 @@
             <span>Alimentação</span>
           </a>
 
+          <a data-route="Mapas" href="{{baseUrl}}Mapas">
+            <iron-icon icon="maps:navigation"></iron-icon>
+            <span>Mapas</span>
+          </a>
 
-          <a data-route="contato" href="{{baseUrl}}contato">
+          <a data-route="Trilhas" href="{{baseUrl}}Trilhas">
+            <iron-icon icon="maps:directions-walk"></iron-icon>
+            <span>Trilhas</span>
+          </a>
+
+
+          <a data-route="Fotos" href="{{baseUrl}}Fotos">
+            <iron-icon icon="maps:local-see"></iron-icon>
+            <span>Fotos</span>
+          </a>
+
+
+          <a data-route="Serviços" href="{{baseUrl}}Serviços">
+            <iron-icon icon="maps:local-gas-station"></iron-icon>
+            <span>Serviços</span>
+          </a>
+
+          <a data-route="Contato" href="{{baseUrl}}Contato">
             <iron-icon icon="mail"></iron-icon>
             <span>Contato</span>
           </a>
@@ -129,15 +152,21 @@
 
                 <p class="subhead">Aqui voce encontra:</p>
                 <my-list></my-list>
+                <my-map></my-map>
+
 
                 <p>Informações, sugetões e criticas <a href="desideratu.com">Desideratu</a> </p>
               </paper-material>
 
               <paper-material elevation="5">
         <simple-gallery>
-            <img data-original="images/img01.jpg" data-index='s1' src="images/thumbnails/img01.jpg" alt="Title 1">
-            <img data-original="images/img02.jpg" data-index='s2' src="images/thumbnails/img02.jpg" alt="Title 2">
-            <img data-original="images/img03.jpg" data-index='s3' src="images/thumbnails/img03.jpg" alt="Title 3">
+            <img data-original="images/fechodaserra/res-DSC_0001.JPG" data-index='s1' src="images/fechodaserra/thumbnails/DSC_0001.JPG" alt="Title 1">
+            <img data-original="images/fechodaserra/res-DSC_0006.JPG" data-index='s2' src="images/fechodaserra/thumbnails/DSC_0006.JPG" alt="Title 2">
+            <img data-original="images/fechodaserra/res-DSC_0007.JPG" data-index='s3' src="images/fechodaserra/thumbnails/DSC_0007.JPG" alt="Title 3">
+            <img data-original="images/fechodaserra/res-DSC_0027.JPG" data-index='s4' src="images/fechodaserra/thumbnails/DSC_0027.JPG" alt="Title 4">
+            <img data-original="images/fechodaserra/res-DSC_0041.JPG" data-index='s5' src="images/fechodaserra/thumbnails/DSC_0041.JPG" alt="Title 5">
+            <img data-original="images/fechodaserra/res-DSC_0057.JPG" data-index='s6' src="images/fechodaserra/thumbnails/DSC_0057.JPG" alt="Title 6">
+            <img data-original="images/fechodaserra/res-DSC_0063.JPG" data-index='s7' src="images/fechodaserra/thumbnails/DSC_0063.JPG" alt="Title 7">
         </simple-gallery>
               </paper-material>
 
@@ -154,7 +183,7 @@
                 <a href$="{{baseUrl}}Hospedagem/Hoteis">Hoteis</a><br>
                 <a href$="{{baseUrl}}Hospedagem/Casas">Casas</a><br>
                 <a href$="{{baseUrl}}Hospedagem/Quartos">Quartos</a><br>
-                <a href$="{{baseUrl}}Hospedagem/Camping">Camping</a>
+                <a href$="{{baseUrl}}Hospedagem/Camping">Camping</a><br>
                 <a href$="{{baseUrl}}Hospedagem/Pousadas">Pousadas</a>                
               </paper-material>
             </section>
@@ -181,9 +210,51 @@
               </paper-material>
             </section>
 
+            <section data-route="Mapas">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Mapas</h1>
+                <p>Esta é a seção de Mapas</p>
+                <iron-image style="width:350px; height:350px; background-color: lightgray;"   sizing="cover" preload fade src="images/MAPA_INSTITUCIONAL_AG21_AGM.jpg"></iron-image>
+                <my-map></my-map>              
+              </paper-material>
+            </section>
+
+            <section data-route="Trilhas">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Trilhas</h1>
+                <p>Esta é a seção de Trilhas</p>
+                <a href$="{{baseUrl}}Trilhas/Trilha do Sol">Trilha do Sol</a>
+              </paper-material>
+            </section>
+
+
+            <section data-route="Fotos">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Fotos</h1>
+                <p>Esta é a seção de Fotos</p>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0001.JPG"></iron-image>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0006.JPG"></iron-image>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0007.JPG"></iron-image>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0027.JPG"></iron-image>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0041.JPG"></iron-image>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0057.JPG"></iron-image>
+                <iron-image style="width:300px; height:300px; background-color: lightgray;"   sizing="cover" preload fade src="images/fechodaserra/res-DSC_0063.JPG"></iron-image>
+            </paper-material>
+            </section>
+
+            <section data-route="Serviços">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Serviços</h1>
+                <p>Esta é a seção de Serviços</p>
+                <a href$="{{baseUrl}}Serviços/Postos Combustivel">Postos Combustivel</a><br>
+                <a href$="{{baseUrl}}Serviços/Posto Saúde">Posto Saúde</a><br>
+              </paper-material>
+            </section>
+
             <section data-route="Hospedagem-info">
               <paper-material elevation="1">
                 <h1 class="page-title focus-target" tabindex="-1">Hospedagem: {{params.name}}</h1>
+                <a target="_blank" href="http://www.pousadatrilhadosol.com.br">Pousada Trilha do SOL</a>
                 <div>Esta é a seção {{params.name}}</div>
               </paper-material>
             </section>
@@ -202,7 +273,37 @@
               </paper-material>
             </section>
 
-            <section data-route="contato">
+            <section data-route="Mapas-info">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Mapas: {{params.name}}</h1>
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="Trilhas-info">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Trilhas: {{params.name}}</h1>
+                                A trilha do Sol possui sua entrada pela MG-050, tudo bem sinalizado e fácil. Para ter acesso à fazenda é preciso desembolsar alguns Reais, o que não fará você se arrepender com o que ela tem para apresentar. Simplesmente maravilhoso o que essa trilha oferece ao seus visitantes. Procurem não se limitar aos caminhos convencionais, e não tenham medo de explorar tudo, pois vale a pena! A fazenda é composta por três cachoeiras: Limite, Grito e a terceira e mais bela, Poço Dourado. Essa última requer um pouquinho de esforço, pois a caminhada exige que você faça algumas partes pela água, o que é divertido caso não esteja acompanhado por uma pessoa que tem pavor de peixe. Recomendo ir cedo e levar lanchinho na mochila, pois leva com certeza o dia inteiro para aproveitar o máximo. A Trilha do Sol é uma passagem obrigatória para quem está visitando Capitolio.<br><br>
+
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="Fotos-info">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Fotos: {{params.name}}</h1>
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="Serviços-info">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Serviços: {{params.name}}</h1>
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="Contato">
               <paper-material elevation="1">
                 <h1 class="page-title focus-target" tabindex="-1">Contato</h1>
                 <p>Estamos aguardando seu contato no Whatsapp 31 99119-9097</p>

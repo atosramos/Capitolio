@@ -86,9 +86,54 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.params = data.params;
       setFocus(app.route);
     });
+
+    page('/Mapas', function() {
+      app.route = 'Mapas';
+      setFocus(app.route);
+    });
+
+    page('/Mapas/:name', function(data) {
+      app.route = 'Mapas-info';
+      app.params = data.params;
+      setFocus(app.route);
+    });
+
+    page('/Trilhas', function() {
+      app.route = 'Trilhas';
+      setFocus(app.route);
+    });
+
+    page('/Trilhas/:name', function(data) {
+      app.route = 'Trilhas-info';
+      app.params = data.params;
+      setFocus(app.route);
+    });
+
+
+    page('/Fotos', function() {
+      app.route = 'Fotos';
+      setFocus(app.route);
+    });
+
+    page('/Fotos/:name', function(data) {
+      app.route = 'Fotos-info';
+      app.params = data.params;
+      setFocus(app.route);
+    });
+
+    page('/Serviços', function() {
+      app.route = 'Serviços';
+      setFocus(app.route);
+    });
+
+    page('/Serviços/:name', function(data) {
+      app.route = 'Serviços-info';
+      app.params = data.params;
+      setFocus(app.route);
+    });
     
-    page('/contact', function() {
-      app.route = 'contact';
+    page('/Contato', function() {
+      app.route = 'Contato';
       setFocus(app.route);
     });
 
