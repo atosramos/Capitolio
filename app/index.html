@@ -1,22 +1,12 @@
 <!doctype html>
-<!--
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer Starter Kit">
-  <title>Polymer Starter Kit</title>
+  <meta name="generator" content="Capitólio Princesinha do Mar">
+  <title>Capitólio Princesinha do Mar</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -37,7 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Polymer Starter Kit">
+  <meta name="apple-mobile-web-app-title" content="Capitólio Princesinha do Mar">
   <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
   <!-- Tile icon for Win8 (144x144) -->
@@ -49,11 +39,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="import" href="simple-gallery.html">
+ 
   <!-- endbuild -->
 
   <!-- Because this project uses vulcanize this should be your only html import
        in this file. All other imports should go in elements.html -->
   <link rel="import" href="elements/elements.html">
+  
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
@@ -82,14 +77,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <span>Home</span>
           </a>
 
-          <a data-route="users" href="{{baseUrl}}users">
-            <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
+          <a data-route="Hospedagem" href="{{baseUrl}}Hospedagem">
+            <iron-icon icon="icons:store"></iron-icon>
+            <span>Hospedagem</span>
           </a>
 
-          <a data-route="contact" href="{{baseUrl}}contact">
+          <a data-route="passeios" href="{{baseUrl}}passeios">
+            <iron-icon icon="icons:rowing"></iron-icon>
+            <span>Passeios</span>
+          </a>
+
+          <a data-route="contato" href="{{baseUrl}}contato">
             <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
+            <span>Contato</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -104,12 +104,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">Capitólio Princesinha do Mar</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">Seu melhor passeio</div>
           </div>
         </paper-toolbar>
 
@@ -120,58 +120,66 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <my-greeting class="focus-target" tabindex="-1"></my-greeting>
 
-                <p class="subhead">You now have:</p>
+                <p class="subhead">Aqui voce encontra:</p>
                 <my-list></my-list>
 
-                <p>Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
+                <p>Informações, sugetões e criticas <a href="desideratu.com">Desideratu</a> </p>
               </paper-material>
 
-              <paper-material elevation="1">
-                <p>This is another card.</p>
+              <paper-material elevation="5">
+        <simple-gallery>
+            <img data-original="images/img01.jpg" data-index='s1' src="images/thumbnails/img01.jpg" alt="Title 1">
+            <img data-original="images/img02.jpg" data-index='s2' src="images/thumbnails/img02.jpg" alt="Title 2">
+            <img data-original="images/img03.jpg" data-index='s3' src="images/thumbnails/img03.jpg" alt="Title 3">
+        </simple-gallery>
               </paper-material>
 
               <paper-material elevation="1">
                 <h2 id="license">License</h2>
-                <p>Everything in this repo is BSD style license unless otherwise specified.</p>
-                <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
-                <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
-                <ul>
-                <li>Redistributions of source code must retain the above copyright
-                notice, this list of conditions and the following disclaimer.</li>
-                <li>Redistributions in binary form must reproduce the above
-                copyright notice, this list of conditions and the following disclaimer
-                in the documentation and/or other materials provided with the
-                distribution.</li>
-                <li>Neither the name of Google Inc. nor the names of its
-                contributors may be used to endorse or promote products derived from
-                this software without specific prior written permission.</li>
-                </ul>
-                <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+                <p>Copyright (c) 2016 The Desideratu Authors. All rights reserved.</p>
               </paper-material>
             </section>
 
-            <section data-route="users">
+            <section data-route="Hospedagem">
               <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">Users</h1>
-                <p>This is the users section</p>
-                <a href$="{{baseUrl}}users/Addy">Addy</a><br>
-                <a href$="{{baseUrl}}users/Rob">Rob</a><br>
-                <a href$="{{baseUrl}}users/Chuck">Chuck</a><br>
-                <a href$="{{baseUrl}}users/Sam">Sam</a>
+                <h1 class="page-title focus-target" tabindex="-1">Hospedagem</h1>
+                <p>Esta é a seção de Hospedagem</p>
+                <a href$="{{baseUrl}}Hospedagem/Hoteis">Hoteis</a><br>
+                <a href$="{{baseUrl}}Hospedagem/Casas">Casas</a><br>
+                <a href$="{{baseUrl}}Hospedagem/Quartos">Quartos</a><br>
+                <a href$="{{baseUrl}}Hospedagem/Camping">Camping</a>
               </paper-material>
             </section>
 
-            <section data-route="user-info">
+            <section data-route="passeios">
               <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">User: {{params.name}}</h1>
-                <div>This is {{params.name}}'s section</div>
+                <h1 class="page-title focus-target" tabindex="-1">Passeios</h1>
+                <p>Esta é a seção de Passeios</p>
+                <a href$="{{baseUrl}}passeios/Lanchas">Lanchas</a><br>
+                <a href$="{{baseUrl}}passeios/Chalanas">Chalanas</a><br>
+                <a href$="{{baseUrl}}passeios/Natação">Natação</a><br>
+                <a href$="{{baseUrl}}passeios/Cachoeiras">Cachoeiras</a>
               </paper-material>
             </section>
 
-            <section data-route="contact">
+            <section data-route="Hospedagem-info">
               <paper-material elevation="1">
-                <h1 class="page-title focus-target" tabindex="-1">Contact</h1>
-                <p>This is the contact section</p>
+                <h1 class="page-title focus-target" tabindex="-1">Hospedagem: {{params.name}}</h1>
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="passeios-info">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Passeios: {{params.name}}</h1>
+                <div>Esta é a seção {{params.name}}</div>
+              </paper-material>
+            </section>
+
+            <section data-route="contato">
+              <paper-material elevation="1">
+                <h1 class="page-title focus-target" tabindex="-1">Contato</h1>
+                <p>Estamos aguardando seu contato no Whatsapp 31 99119-9097</p>
               </paper-material>
             </section>
           </iron-pages>
@@ -181,8 +189,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <paper-toast id="toast"></paper-toast>
 
-    <!-- Uncomment next block to enable Service Worker support (1/2) -->
-    <!--
     <paper-toast id="caching-complete"
                  duration="6000"
                  text="Caching complete! This app will work offline.">
@@ -197,7 +203,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                          cache-config-file="cache-config.json">
       </platinum-sw-cache>
     </platinum-sw-register>
-    -->
+
 
   </template>
 
