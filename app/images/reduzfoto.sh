@@ -1,4 +1,6 @@
-for i in *.JPG
+#!/bin/bash
+for i in *.jpg
 do
-convert -resize 300x300 $i res-$i
+nome=`echo $i|awk -F\. '{print $1}'`
+convert -resize 300x300 $nome.jpg res-$nome.jpg
 done

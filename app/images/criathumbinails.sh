@@ -1,4 +1,6 @@
-for i in *.JPG
+#!/bin/bash
+for i in *.jpg
 do
-convert -thumbnail 100 $i thumbnails/$i
+nome=`echo $i|awk -F\. '{print $1}'`
+convert -thumbnail 100 $nome.jpg thumbnails/$nome.jpg
 done
